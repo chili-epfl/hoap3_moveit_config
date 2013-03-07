@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="hoap-3">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="right_arm">
+        <joint name="CHEST-R_SFE-joint" />
+        <joint name="R_SFE-R_SAA-joint" />
+        <joint name="R_SAA-R_SHR-joint" />
+        <joint name="R_SHR-R_EB-joint" />
+        <joint name="R_EB-R_WR-joint" />
+    </group>
+    <group name="left_arm">
+        <joint name="CHEST-L_SFE-joint" />
+        <joint name="L_SFE-L_SAA-joint" />
+        <joint name="L_SAA-L_SHR-joint" />
+        <joint name="L_SHR-L_EB-joint" />
+        <joint name="L_EB-L_WR-joint" />
+    </group>
+    <group name="right_leg">
+        <joint name="WAIST-R_LR-joint" />
+        <joint name="R_LR-R_LAA-joint" />
+        <joint name="R_LAA-R_LFE-joint" />
+        <joint name="R_LFE-R_KN-joint" />
+        <joint name="R_KN-R_AFE-joint" />
+        <joint name="R_AFE-R_AAA-joint" />
+    </group>
+    <group name="left_leg">
+        <joint name="WAIST-L_LR-joint" />
+        <joint name="L_LR-L_LAA-joint" />
+        <joint name="L_LAA-L_LFE-joint" />
+        <joint name="L_LFE-L_KN-joint" />
+        <joint name="L_KN-L_AFE-joint" />
+        <joint name="L_AFE-L_AAA-joint" />
+    </group>
+    <group name="neck">
+        <joint name="CHEST-H_PAN-joint" />
+        <joint name="H_PAN-H_TILT-joint" />
+        <joint name="H_TILT-H_ROLL-joint" />
+    </group>
+    <group name="torso">
+        <joint name="CHEST-WAIST-joint" />
+    </group>
+    <group name="right_hand">
+        <link name="R_HAND" />
+    </group>
+    <group name="left_hand">
+        <link name="L_HAND" />
+    </group>
+    <group name="right_foot">
+        <link name="R_FOOT" />
+    </group>
+    <group name="left_foot">
+        <link name="L_FOOT" />
+    </group>
+    <group name="head">
+        <link name="HEAD" />
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="right_arm_folded" group="right_arm">
+        <joint name="CHEST-R_SFE-joint" value="0.353" />
+        <joint name="R_EB-R_WR-joint" value="1.5178" />
+        <joint name="R_SAA-R_SHR-joint" value="1.5531" />
+        <joint name="R_SFE-R_SAA-joint" value="0.0706" />
+        <joint name="R_SHR-R_EB-joint" value="1.3413" />
+    </group_state>
+    <group_state name="left_arm_folded" group="left_arm">
+        <joint name="CHEST-L_SFE-joint" value="0.953" />
+        <joint name="L_EB-L_WR-joint" value="2.0826" />
+        <joint name="L_SAA-L_SHR-joint" value="-2.2591" />
+        <joint name="L_SFE-L_SAA-joint" value="0.2118" />
+        <joint name="L_SHR-L_EB-joint" value="1.2001" />
+    </group_state>
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="right_hand_eef" parent_link="R_WR" group="right_hand" />
+    <end_effector name="left_hand_eef" parent_link="L_WR" group="left_hand" />
+    <end_effector name="head_eef" parent_link="H_ROLL" group="head" />
+    <end_effector name="left_foot_eef" parent_link="L_AAA" group="left_foot" />
+    <end_effector name="right_foot_eef" parent_link="R_AAA" group="right_foot" />
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="virtual_joint" type="planar" parent_frame="odom_combined" child_link="base_link" />
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="CHEST" link2="H_PAN" reason="Adjacent" />
+    <disable_collisions link1="CHEST" link2="H_ROLL" reason="Never" />
+    <disable_collisions link1="CHEST" link2="L_LAA" reason="Default" />
+    <disable_collisions link1="CHEST" link2="L_LFE" reason="Default" />
+    <disable_collisions link1="CHEST" link2="L_LR" reason="Default" />
+    <disable_collisions link1="CHEST" link2="L_SFE" reason="Adjacent" />
+    <disable_collisions link1="CHEST" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="CHEST" link2="R_SFE" reason="Adjacent" />
+    <disable_collisions link1="CHEST" link2="WAIST" reason="Adjacent" />
+    <disable_collisions link1="H_PAN" link2="H_ROLL" reason="Adjacent" />
+    <disable_collisions link1="H_PAN" link2="L_LAA" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="L_LR" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="L_SAA" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_LR" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="WAIST" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="L_LAA" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="L_LR" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_LR" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="WAIST" reason="Never" />
+    <disable_collisions link1="L_AAA" link2="L_AFE" reason="Adjacent" />
+    <disable_collisions link1="L_AAA" link2="R_AAA" reason="Default" />
+    <disable_collisions link1="L_AFE" link2="L_KN" reason="Adjacent" />
+    <disable_collisions link1="L_EB" link2="L_HAND" reason="Never" />
+    <disable_collisions link1="L_EB" link2="L_SAA" reason="Never" />
+    <disable_collisions link1="L_EB" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="L_EB" link2="L_SHR" reason="Adjacent" />
+    <disable_collisions link1="L_EB" link2="L_WR" reason="Adjacent" />
+    <disable_collisions link1="L_EB" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_HAND" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_HAND" link2="L_WR" reason="Adjacent" />
+    <disable_collisions link1="L_KN" link2="L_LFE" reason="Adjacent" />
+    <disable_collisions link1="L_LAA" link2="L_LFE" reason="Adjacent" />
+    <disable_collisions link1="L_LAA" link2="L_LR" reason="Adjacent" />
+    <disable_collisions link1="L_LAA" link2="L_SAA" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="WAIST" reason="Default" />
+    <disable_collisions link1="L_LFE" link2="L_LR" reason="Default" />
+    <disable_collisions link1="L_LFE" link2="WAIST" reason="Default" />
+    <disable_collisions link1="L_LR" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_LR" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_LR" link2="WAIST" reason="Adjacent" />
+    <disable_collisions link1="L_SAA" link2="L_SFE" reason="Adjacent" />
+    <disable_collisions link1="L_SAA" link2="L_SHR" reason="Adjacent" />
+    <disable_collisions link1="L_SAA" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_LR" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="WAIST" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_LR" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="WAIST" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="L_WR" reason="Default" />
+    <disable_collisions link1="L_SHR" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="R_AAA" link2="R_AFE" reason="Adjacent" />
+    <disable_collisions link1="R_AFE" link2="R_KN" reason="Adjacent" />
+    <disable_collisions link1="R_EB" link2="R_HAND" reason="Never" />
+    <disable_collisions link1="R_EB" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="R_EB" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="R_EB" link2="R_SHR" reason="Adjacent" />
+    <disable_collisions link1="R_EB" link2="R_WR" reason="Adjacent" />
+    <disable_collisions link1="R_HAND" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="R_HAND" link2="R_WR" reason="Adjacent" />
+    <disable_collisions link1="R_KN" link2="R_LFE" reason="Adjacent" />
+    <disable_collisions link1="R_LAA" link2="R_LFE" reason="Adjacent" />
+    <disable_collisions link1="R_LAA" link2="R_LR" reason="Adjacent" />
+    <disable_collisions link1="R_LAA" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="R_LAA" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="R_LAA" link2="WAIST" reason="Default" />
+    <disable_collisions link1="R_LFE" link2="R_LR" reason="Default" />
+    <disable_collisions link1="R_LR" link2="WAIST" reason="Adjacent" />
+    <disable_collisions link1="R_SAA" link2="R_SFE" reason="Adjacent" />
+    <disable_collisions link1="R_SAA" link2="R_SHR" reason="Adjacent" />
+    <disable_collisions link1="R_SAA" link2="WAIST" reason="Never" />
+    <disable_collisions link1="R_SFE" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="R_SFE" link2="WAIST" reason="Never" />
+    <disable_collisions link1="R_SHR" link2="R_WR" reason="Default" />
+</robot>
