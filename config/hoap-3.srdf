@@ -10,42 +10,42 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="right_arm">
-        <joint name="CHEST-R_SFE-joint" />
-        <joint name="R_SFE-R_SAA-joint" />
-        <joint name="R_SAA-R_SHR-joint" />
-        <joint name="R_SHR-R_EB-joint" />
-        <joint name="R_EB-R_WR-joint" />
+        <joint name="CHEST_R_SFE_joint" />
+        <joint name="R_SFE_R_SAA_joint" />
+        <joint name="R_SAA_R_SHR_joint" />
+        <joint name="R_SHR_R_EB_joint" />
+        <joint name="R_EB_R_WR_joint" />
     </group>
     <group name="left_arm">
-        <joint name="CHEST-L_SFE-joint" />
-        <joint name="L_SFE-L_SAA-joint" />
-        <joint name="L_SAA-L_SHR-joint" />
-        <joint name="L_SHR-L_EB-joint" />
-        <joint name="L_EB-L_WR-joint" />
+        <joint name="CHEST_L_SFE_joint" />
+        <joint name="L_SFE_L_SAA_joint" />
+        <joint name="L_SAA_L_SHR_joint" />
+        <joint name="L_SHR_L_EB_joint" />
+        <joint name="L_EB_L_WR_joint" />
     </group>
     <group name="right_leg">
-        <joint name="WAIST-R_LR-joint" />
-        <joint name="R_LR-R_LAA-joint" />
-        <joint name="R_LAA-R_LFE-joint" />
-        <joint name="R_LFE-R_KN-joint" />
-        <joint name="R_KN-R_AFE-joint" />
-        <joint name="R_AFE-R_AAA-joint" />
+        <joint name="WAIST_R_LR_joint" />
+        <joint name="R_LR_R_LAA_joint" />
+        <joint name="R_LAA_R_LFE_joint" />
+        <joint name="R_LFE_R_KN_joint" />
+        <joint name="R_KN_R_AFE_joint" />
+        <joint name="R_AFE_R_AAA_joint" />
     </group>
     <group name="left_leg">
-        <joint name="WAIST-L_LR-joint" />
-        <joint name="L_LR-L_LAA-joint" />
-        <joint name="L_LAA-L_LFE-joint" />
-        <joint name="L_LFE-L_KN-joint" />
-        <joint name="L_KN-L_AFE-joint" />
-        <joint name="L_AFE-L_AAA-joint" />
+        <joint name="WAIST_L_LR_joint" />
+        <joint name="L_LR_L_LAA_joint" />
+        <joint name="L_LAA_L_LFE_joint" />
+        <joint name="L_LFE_L_KN_joint" />
+        <joint name="L_KN_L_AFE_joint" />
+        <joint name="L_AFE_L_AAA_joint" />
     </group>
     <group name="neck">
-        <joint name="CHEST-H_PAN-joint" />
-        <joint name="H_PAN-H_TILT-joint" />
-        <joint name="H_TILT-H_ROLL-joint" />
+        <joint name="CHEST_H_PAN_joint" />
+        <joint name="H_PAN_H_TILT_joint" />
+        <joint name="H_TILT_H_ROLL_joint" />
     </group>
     <group name="torso">
-        <joint name="CHEST-WAIST-joint" />
+        <joint name="CHEST_WAIST_joint" />
     </group>
     <group name="right_hand">
         <link name="R_HAND" />
@@ -64,18 +64,18 @@
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="right_arm_folded" group="right_arm">
-        <joint name="CHEST-R_SFE-joint" value="0.353" />
-        <joint name="R_EB-R_WR-joint" value="1.5178" />
-        <joint name="R_SAA-R_SHR-joint" value="1.5531" />
-        <joint name="R_SFE-R_SAA-joint" value="0.0706" />
-        <joint name="R_SHR-R_EB-joint" value="1.3413" />
+        <joint name="CHEST_R_SFE_joint" value="0.353" />
+        <joint name="R_EB_R_WR_joint" value="1.5178" />
+        <joint name="R_SAA_R_SHR_joint" value="1.5531" />
+        <joint name="R_SFE_R_SAA_joint" value="0.0706" />
+        <joint name="R_SHR_R_EB_joint" value="1.3413" />
     </group_state>
     <group_state name="left_arm_folded" group="left_arm">
-        <joint name="CHEST-L_SFE-joint" value="0.953" />
-        <joint name="L_EB-L_WR-joint" value="2.0826" />
-        <joint name="L_SAA-L_SHR-joint" value="-2.2591" />
-        <joint name="L_SFE-L_SAA-joint" value="0.2118" />
-        <joint name="L_SHR-L_EB-joint" value="1.2001" />
+        <joint name="CHEST_L_SFE_joint" value="0.953" />
+        <joint name="L_EB_L_WR_joint" value="2.0826" />
+        <joint name="L_SAA_L_SHR_joint" value="-2.2591" />
+        <joint name="L_SFE_L_SAA_joint" value="0.2118" />
+        <joint name="L_SHR_L_EB_joint" value="1.2001" />
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="right_hand_eef" parent_link="R_WR" group="right_hand" />
