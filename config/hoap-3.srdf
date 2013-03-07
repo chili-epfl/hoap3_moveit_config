@@ -88,96 +88,248 @@
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="CHEST" link2="H_PAN" reason="Adjacent" />
     <disable_collisions link1="CHEST" link2="H_ROLL" reason="Never" />
-    <disable_collisions link1="CHEST" link2="L_LAA" reason="Default" />
-    <disable_collisions link1="CHEST" link2="L_LFE" reason="Default" />
-    <disable_collisions link1="CHEST" link2="L_LR" reason="Default" />
+    <disable_collisions link1="CHEST" link2="L_LAA" reason="Never" />
+    <disable_collisions link1="CHEST" link2="L_LFE" reason="Never" />
+    <disable_collisions link1="CHEST" link2="L_LR" reason="Never" />
     <disable_collisions link1="CHEST" link2="L_SFE" reason="Adjacent" />
+    <disable_collisions link1="CHEST" link2="R_EB" reason="Never" />
     <disable_collisions link1="CHEST" link2="R_SAA" reason="Never" />
     <disable_collisions link1="CHEST" link2="R_SFE" reason="Adjacent" />
+    <disable_collisions link1="CHEST" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="CHEST" link2="R_WR" reason="Never" />
     <disable_collisions link1="CHEST" link2="WAIST" reason="Adjacent" />
     <disable_collisions link1="H_PAN" link2="H_ROLL" reason="Adjacent" />
+    <disable_collisions link1="H_PAN" link2="L_AAA" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="L_AFE" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="L_EB" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="L_KN" reason="Never" />
     <disable_collisions link1="H_PAN" link2="L_LAA" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="L_LFE" reason="Never" />
     <disable_collisions link1="H_PAN" link2="L_LR" reason="Never" />
     <disable_collisions link1="H_PAN" link2="L_SAA" reason="Never" />
     <disable_collisions link1="H_PAN" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_AAA" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_AFE" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_EB" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_KN" reason="Never" />
     <disable_collisions link1="H_PAN" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_LFE" reason="Never" />
     <disable_collisions link1="H_PAN" link2="R_LR" reason="Never" />
     <disable_collisions link1="H_PAN" link2="R_SAA" reason="Never" />
     <disable_collisions link1="H_PAN" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="H_PAN" link2="R_SHR" reason="Never" />
     <disable_collisions link1="H_PAN" link2="WAIST" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="L_AAA" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="L_AFE" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="L_KN" reason="Never" />
     <disable_collisions link1="H_ROLL" link2="L_LAA" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="L_LFE" reason="Never" />
     <disable_collisions link1="H_ROLL" link2="L_LR" reason="Never" />
     <disable_collisions link1="H_ROLL" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_AAA" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_AFE" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_EB" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_KN" reason="Never" />
     <disable_collisions link1="H_ROLL" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_LFE" reason="Never" />
     <disable_collisions link1="H_ROLL" link2="R_LR" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_SAA" reason="Never" />
     <disable_collisions link1="H_ROLL" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="H_ROLL" link2="R_SHR" reason="Never" />
     <disable_collisions link1="H_ROLL" link2="WAIST" reason="Never" />
     <disable_collisions link1="L_AAA" link2="L_AFE" reason="Adjacent" />
-    <disable_collisions link1="L_AAA" link2="R_AAA" reason="Default" />
+    <disable_collisions link1="L_AAA" link2="L_EB" reason="Never" />
+    <disable_collisions link1="L_AAA" link2="L_LAA" reason="Never" />
+    <disable_collisions link1="L_AAA" link2="L_LFE" reason="Never" />
+    <disable_collisions link1="L_AAA" link2="L_SAA" reason="Never" />
+    <disable_collisions link1="L_AAA" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="L_AAA" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_AAA" link2="R_AAA" reason="Never" />
+    <disable_collisions link1="L_AAA" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_AFE" link2="L_EB" reason="Never" />
     <disable_collisions link1="L_AFE" link2="L_KN" reason="Adjacent" />
+    <disable_collisions link1="L_AFE" link2="L_LAA" reason="Never" />
+    <disable_collisions link1="L_AFE" link2="L_LFE" reason="Never" />
+    <disable_collisions link1="L_AFE" link2="L_SAA" reason="Never" />
+    <disable_collisions link1="L_AFE" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="L_AFE" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_AFE" link2="L_WR" reason="Never" />
+    <disable_collisions link1="L_AFE" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_AFE" link2="R_SFE" reason="Never" />
     <disable_collisions link1="L_EB" link2="L_HAND" reason="Never" />
+    <disable_collisions link1="L_EB" link2="L_KN" reason="Never" />
+    <disable_collisions link1="L_EB" link2="L_LAA" reason="Never" />
+    <disable_collisions link1="L_EB" link2="L_LR" reason="Never" />
     <disable_collisions link1="L_EB" link2="L_SAA" reason="Never" />
     <disable_collisions link1="L_EB" link2="L_SFE" reason="Never" />
     <disable_collisions link1="L_EB" link2="L_SHR" reason="Adjacent" />
     <disable_collisions link1="L_EB" link2="L_WR" reason="Adjacent" />
+    <disable_collisions link1="L_EB" link2="R_AFE" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_HAND" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_KN" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_LFE" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_LR" reason="Never" />
     <disable_collisions link1="L_EB" link2="R_SAA" reason="Never" />
     <disable_collisions link1="L_EB" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_EB" link2="R_WR" reason="Never" />
+    <disable_collisions link1="L_EB" link2="WAIST" reason="Never" />
+    <disable_collisions link1="L_HAND" link2="L_SFE" reason="Never" />
     <disable_collisions link1="L_HAND" link2="L_SHR" reason="Never" />
     <disable_collisions link1="L_HAND" link2="L_WR" reason="Adjacent" />
+    <disable_collisions link1="L_HAND" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_HAND" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="L_HAND" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_HAND" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_HAND" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_HAND" link2="R_WR" reason="Never" />
+    <disable_collisions link1="L_KN" link2="L_LAA" reason="Never" />
     <disable_collisions link1="L_KN" link2="L_LFE" reason="Adjacent" />
+    <disable_collisions link1="L_KN" link2="L_SAA" reason="Never" />
+    <disable_collisions link1="L_KN" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="L_KN" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_KN" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_KN" link2="R_SFE" reason="Never" />
     <disable_collisions link1="L_LAA" link2="L_LFE" reason="Adjacent" />
     <disable_collisions link1="L_LAA" link2="L_LR" reason="Adjacent" />
     <disable_collisions link1="L_LAA" link2="L_SAA" reason="Never" />
     <disable_collisions link1="L_LAA" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="R_HAND" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="R_LAA" reason="Never" />
     <disable_collisions link1="L_LAA" link2="R_SAA" reason="Never" />
     <disable_collisions link1="L_LAA" link2="R_SFE" reason="Never" />
-    <disable_collisions link1="L_LAA" link2="WAIST" reason="Default" />
-    <disable_collisions link1="L_LFE" link2="L_LR" reason="Default" />
-    <disable_collisions link1="L_LFE" link2="WAIST" reason="Default" />
+    <disable_collisions link1="L_LAA" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="R_WR" reason="Never" />
+    <disable_collisions link1="L_LAA" link2="WAIST" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="L_LR" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="L_SAA" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="R_WR" reason="Never" />
+    <disable_collisions link1="L_LFE" link2="WAIST" reason="Never" />
+    <disable_collisions link1="L_LR" link2="L_SAA" reason="Never" />
+    <disable_collisions link1="L_LR" link2="L_SFE" reason="Never" />
+    <disable_collisions link1="L_LR" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_LR" link2="R_EB" reason="Never" />
     <disable_collisions link1="L_LR" link2="R_SAA" reason="Never" />
     <disable_collisions link1="L_LR" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_LR" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_LR" link2="R_WR" reason="Never" />
     <disable_collisions link1="L_LR" link2="WAIST" reason="Adjacent" />
     <disable_collisions link1="L_SAA" link2="L_SFE" reason="Adjacent" />
     <disable_collisions link1="L_SAA" link2="L_SHR" reason="Adjacent" />
+    <disable_collisions link1="L_SAA" link2="R_AAA" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_AFE" reason="Never" />
     <disable_collisions link1="L_SAA" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_HAND" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_KN" reason="Never" />
     <disable_collisions link1="L_SAA" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_LFE" reason="Never" />
     <disable_collisions link1="L_SAA" link2="R_LR" reason="Never" />
     <disable_collisions link1="L_SAA" link2="R_SAA" reason="Never" />
     <disable_collisions link1="L_SAA" link2="R_SFE" reason="Never" />
     <disable_collisions link1="L_SAA" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_SAA" link2="R_WR" reason="Never" />
     <disable_collisions link1="L_SAA" link2="WAIST" reason="Never" />
     <disable_collisions link1="L_SFE" link2="L_SHR" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="L_WR" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_AAA" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_AFE" reason="Never" />
     <disable_collisions link1="L_SFE" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_HAND" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_KN" reason="Never" />
     <disable_collisions link1="L_SFE" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_LFE" reason="Never" />
     <disable_collisions link1="L_SFE" link2="R_LR" reason="Never" />
     <disable_collisions link1="L_SFE" link2="R_SAA" reason="Never" />
     <disable_collisions link1="L_SFE" link2="R_SFE" reason="Never" />
     <disable_collisions link1="L_SFE" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_SFE" link2="R_WR" reason="Never" />
     <disable_collisions link1="L_SFE" link2="WAIST" reason="Never" />
-    <disable_collisions link1="L_SHR" link2="L_WR" reason="Default" />
+    <disable_collisions link1="L_SHR" link2="L_WR" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_AFE" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_HAND" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_KN" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_LFE" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_LR" reason="Never" />
     <disable_collisions link1="L_SHR" link2="R_SAA" reason="Never" />
     <disable_collisions link1="L_SHR" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="R_WR" reason="Never" />
+    <disable_collisions link1="L_SHR" link2="WAIST" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_EB" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_HAND" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_LFE" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_LR" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="L_WR" link2="R_WR" reason="Never" />
     <disable_collisions link1="R_AAA" link2="R_AFE" reason="Adjacent" />
+    <disable_collisions link1="R_AAA" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="R_AAA" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="R_AAA" link2="R_WR" reason="Never" />
+    <disable_collisions link1="R_AFE" link2="R_EB" reason="Never" />
+    <disable_collisions link1="R_AFE" link2="R_HAND" reason="Never" />
     <disable_collisions link1="R_AFE" link2="R_KN" reason="Adjacent" />
+    <disable_collisions link1="R_AFE" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="R_AFE" link2="R_LFE" reason="Never" />
+    <disable_collisions link1="R_AFE" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="R_AFE" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="R_AFE" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="R_AFE" link2="R_WR" reason="Never" />
     <disable_collisions link1="R_EB" link2="R_HAND" reason="Never" />
+    <disable_collisions link1="R_EB" link2="R_KN" reason="Never" />
+    <disable_collisions link1="R_EB" link2="R_LAA" reason="Never" />
+    <disable_collisions link1="R_EB" link2="R_LFE" reason="Never" />
+    <disable_collisions link1="R_EB" link2="R_LR" reason="Never" />
     <disable_collisions link1="R_EB" link2="R_SAA" reason="Never" />
     <disable_collisions link1="R_EB" link2="R_SFE" reason="Never" />
     <disable_collisions link1="R_EB" link2="R_SHR" reason="Adjacent" />
     <disable_collisions link1="R_EB" link2="R_WR" reason="Adjacent" />
+    <disable_collisions link1="R_EB" link2="WAIST" reason="Never" />
+    <disable_collisions link1="R_HAND" link2="R_SFE" reason="Never" />
     <disable_collisions link1="R_HAND" link2="R_SHR" reason="Never" />
     <disable_collisions link1="R_HAND" link2="R_WR" reason="Adjacent" />
+    <disable_collisions link1="R_KN" link2="R_LAA" reason="Never" />
     <disable_collisions link1="R_KN" link2="R_LFE" reason="Adjacent" />
+    <disable_collisions link1="R_KN" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="R_KN" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="R_KN" link2="R_SHR" reason="Never" />
     <disable_collisions link1="R_LAA" link2="R_LFE" reason="Adjacent" />
     <disable_collisions link1="R_LAA" link2="R_LR" reason="Adjacent" />
     <disable_collisions link1="R_LAA" link2="R_SAA" reason="Never" />
     <disable_collisions link1="R_LAA" link2="R_SFE" reason="Never" />
-    <disable_collisions link1="R_LAA" link2="WAIST" reason="Default" />
-    <disable_collisions link1="R_LFE" link2="R_LR" reason="Default" />
+    <disable_collisions link1="R_LAA" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="R_LAA" link2="WAIST" reason="Never" />
+    <disable_collisions link1="R_LFE" link2="R_LR" reason="Never" />
+    <disable_collisions link1="R_LFE" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="R_LFE" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="R_LFE" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="R_LR" link2="R_SAA" reason="Never" />
+    <disable_collisions link1="R_LR" link2="R_SFE" reason="Never" />
+    <disable_collisions link1="R_LR" link2="R_SHR" reason="Never" />
     <disable_collisions link1="R_LR" link2="WAIST" reason="Adjacent" />
     <disable_collisions link1="R_SAA" link2="R_SFE" reason="Adjacent" />
     <disable_collisions link1="R_SAA" link2="R_SHR" reason="Adjacent" />
     <disable_collisions link1="R_SAA" link2="WAIST" reason="Never" />
     <disable_collisions link1="R_SFE" link2="R_SHR" reason="Never" />
+    <disable_collisions link1="R_SFE" link2="R_WR" reason="Never" />
     <disable_collisions link1="R_SFE" link2="WAIST" reason="Never" />
-    <disable_collisions link1="R_SHR" link2="R_WR" reason="Default" />
+    <disable_collisions link1="R_SHR" link2="R_WR" reason="Never" />
+    <disable_collisions link1="R_SHR" link2="WAIST" reason="Never" />
+    <disable_collisions link1="R_WR" link2="WAIST" reason="Never" />
 </robot>
