@@ -1,13 +1,12 @@
 <launch>
 
-  <param name="robot_description" textfile="$(find hoap3_description)/hoap3.urdf" />
-  <param name="robot_description_semantic" textfile="$(find hoap3_moveit_config)/config/hoap-3.srdf" />
+  <include file="$(find hoap3_description)/upload_hoap3.launch"/>
 
   <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster" args="0 0 0 0 0 0 odom_combined base_link 100" />
 
 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-    <param name="/use_gui" value="false"/>
+    <param name="/use_gui" value="true"/>
   </node>
   
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
