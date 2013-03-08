@@ -22,7 +22,7 @@
         <chain base_link="WAIST" tip_link="L_AAA" />
     </group>
     <group name="torso">
-        <joint name="CHEST_WAIST_joint" />
+        <chain base_link="WAIST" tip_link="CHEST" />
     </group>
     <group name="right_hand">
         <link name="R_HAND" />
