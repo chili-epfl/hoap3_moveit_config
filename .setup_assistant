@@ -1,6 +1,6 @@
 moveit_setup_assistant_config:
   URDF:
-    package: ""
-    relative_path: /home/viki/src/hoap3_description/hoap3.urdf
+    package: hoap3_description
+    relative_path: hoap3.urdf
   SRDF:
-    relative_path: config/hoap-3.srdf
+    relative_path: config/hoap3.srdf

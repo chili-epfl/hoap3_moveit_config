@@ -3,46 +3,23 @@
     This is a format for representing semantic information about the robot structure.
     A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
 -->
-<robot name="hoap-3">
+<robot name="hoap3">
     <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
     <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
     <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="right_arm">
-        <joint name="CHEST_R_SFE_joint" />
-        <joint name="R_SFE_R_SAA_joint" />
-        <joint name="R_SAA_R_SHR_joint" />
-        <joint name="R_SHR_R_EB_joint" />
-        <joint name="R_EB_R_WR_joint" />
+        <chain base_link="CHEST" tip_link="R_WR" />
     </group>
     <group name="left_arm">
-        <joint name="CHEST_L_SFE_joint" />
-        <joint name="L_SFE_L_SAA_joint" />
-        <joint name="L_SAA_L_SHR_joint" />
-        <joint name="L_SHR_L_EB_joint" />
-        <joint name="L_EB_L_WR_joint" />
+        <chain base_link="CHEST" tip_link="L_WR" />
     </group>
     <group name="right_leg">
-        <joint name="WAIST_R_LR_joint" />
-        <joint name="R_LR_R_LAA_joint" />
-        <joint name="R_LAA_R_LFE_joint" />
-        <joint name="R_LFE_R_KN_joint" />
-        <joint name="R_KN_R_AFE_joint" />
-        <joint name="R_AFE_R_AAA_joint" />
+        <chain base_link="WAIST" tip_link="R_AAA" />
     </group>
     <group name="left_leg">
-        <joint name="WAIST_L_LR_joint" />
-        <joint name="L_LR_L_LAA_joint" />
-        <joint name="L_LAA_L_LFE_joint" />
-        <joint name="L_LFE_L_KN_joint" />
-        <joint name="L_KN_L_AFE_joint" />
-        <joint name="L_AFE_L_AAA_joint" />
-    </group>
-    <group name="neck">
-        <joint name="CHEST_H_PAN_joint" />
-        <joint name="H_PAN_H_TILT_joint" />
-        <joint name="H_TILT_H_ROLL_joint" />
+        <chain base_link="WAIST" tip_link="L_AAA" />
     </group>
     <group name="torso">
         <joint name="CHEST_WAIST_joint" />
@@ -59,8 +36,19 @@
     <group name="left_foot">
         <link name="L_FOOT" />
     </group>
-    <group name="head">
-        <link name="HEAD" />
+    <group name="arms">
+        <group name="left_arm" />
+        <group name="right_arm" />
+    </group>
+    <group name="legs">
+        <group name="right_leg" />
+        <group name="left_leg" />
+    </group>
+    <group name="left_arm_and_torso">
+        <chain base_link="WAIST" tip_link="L_WR" />
+    </group>
+    <group name="right_arm_and_torso">
+        <chain base_link="WAIST" tip_link="R_WR" />
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="right_arm_folded" group="right_arm">
@@ -80,11 +68,12 @@
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="right_hand_eef" parent_link="R_WR" group="right_hand" />
     <end_effector name="left_hand_eef" parent_link="L_WR" group="left_hand" />
-    <end_effector name="head_eef" parent_link="H_ROLL" group="head" />
     <end_effector name="left_foot_eef" parent_link="L_AAA" group="left_foot" />
     <end_effector name="right_foot_eef" parent_link="R_AAA" group="right_foot" />
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="virtual_joint" type="planar" parent_frame="odom_combined" child_link="base_link" />
+    <virtual_joint name="world_joint" type="planar" parent_frame="odom_combined" child_link="base_link" />
+    <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
+    <passive_joint name="world_joint" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="CHEST" link2="H_PAN" reason="Adjacent" />
     <disable_collisions link1="CHEST" link2="H_ROLL" reason="Never" />

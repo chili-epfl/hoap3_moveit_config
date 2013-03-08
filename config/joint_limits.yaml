@@ -1,9 +1,4 @@
 joint_limits:
-  CHEST_H_PAN_joint:
-    has_velocity_limits: true
-    max_velocity: 1.0
-    has_acceleration_limits: true
-    max_acceleration: 1.0
   CHEST_L_SFE_joint:
     has_velocity_limits: true
     max_velocity: 1.0
@@ -15,16 +10,6 @@ joint_limits:
     has_acceleration_limits: true
     max_acceleration: 1.0
   CHEST_WAIST_joint:
-    has_velocity_limits: true
-    max_velocity: 1.0
-    has_acceleration_limits: true
-    max_acceleration: 1.0
-  H_PAN_H_TILT_joint:
-    has_velocity_limits: true
-    max_velocity: 1.0
-    has_acceleration_limits: true
-    max_acceleration: 1.0
-  H_TILT_H_ROLL_joint:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: true
