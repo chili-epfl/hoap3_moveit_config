@@ -4,8 +4,11 @@
 
   <node pkg="tf" type="static_transform_publisher" name="map_broadcaster" args="-0.3 0 0.25 0 0 0 map odom_combined 100" />
 
+  <!--<node pkg="tf" type="static_transform_publisher" name="paper_sheet_broadcaster" args="-0.226 -0.161 0.301 -1.57 0 0 map paper_sheet 100" />-->
+
   <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster" args="0 0 0 0 0 0 odom_combined base_link 100" />
 
+  <node pkg="tf" type="static_transform_publisher" name="pen_broadcaster" args="-0.05 0.0 -0.03 0 1.57 0 R_HAND pen_tip 100" />
 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <rosparam command="load" file="$(find hoap3_description)/zeros.yaml" />

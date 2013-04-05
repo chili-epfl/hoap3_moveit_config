@@ -9,11 +9,6 @@ joint_limits:
     max_velocity: 1.0
     has_acceleration_limits: true
     max_acceleration: 1.0
-  CHEST_WAIST_joint:
-    has_velocity_limits: true
-    max_velocity: 1.0
-    has_acceleration_limits: true
-    max_acceleration: 1.0
   L_AFE_L_AAA_joint:
     has_velocity_limits: true
     max_velocity: 1.0
@@ -100,6 +95,11 @@ joint_limits:
     has_acceleration_limits: true
     max_acceleration: 1.0
   R_SHR_R_EB_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: true
+    max_acceleration: 1.0
+  WAIST_CHEST_joint:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: true
